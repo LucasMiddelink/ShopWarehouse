@@ -1,0 +1,21 @@
+# Secret
+.env
+
+# Dependencies
+node_modules/
+*/node_modules/
+
+# In Progress
+authControllers.js
+auth.js
+authMiddleware.js
+
+# Misc
+.DS_Store
+.DS_Store*
+/todo.txt
+.vscode/*
+
+# SQL queries
+*/sql/
+sql/
