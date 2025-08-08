@@ -5,11 +5,6 @@
 node_modules/
 */node_modules/
 
-# In Progress
-authControllers.js
-auth.js
-authMiddleware.js
-
 # Misc
 .DS_Store
 .DS_Store*
@@ -17,5 +12,6 @@ authMiddleware.js
 .vscode/*
 
 # SQL queries
-*/sql/
 sql/
+*.sql
+*.pgsql

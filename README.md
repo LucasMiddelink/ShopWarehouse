@@ -63,6 +63,26 @@ A full-stack warehouse management application with both admin dashboard and cust
 }
 ```
 
+## Authentication
+
+| Method | Endpoint | Description | Auth Required | Body Required |
+|--------|----------|-------------|---------------|---------------|
+| `POST` | `/api/auth/register/customer` | Register new customer | None | ✅ Yes |
+| `POST` | `/api/auth/login` | Login (all roles) | None | ✅ Yes |
+| `POST` | `/api/auth/register/employee` | Create employee account | Employee/Admin | ✅ Yes |
+| `POST` | `/api/auth/register/admin` | Create admin account | Employee/Admin | ✅ Yes |
+| `GET` | `/api/auth/me` | Get current user info | Any user | No |
+| `POST` | `/api/auth/logout` | Logout user | Any user | No |
+
+### Request Body for Registration (any) & Login
+
+```json
+{
+ "email": "user@example.com",
+ "password": "password123"
+}
+```
+
 **Field Descriptions:**
 - `name` (string) - Product name
 - `sku` (string) - Stock-Keeping Unit identifier  
