@@ -9,9 +9,9 @@ A full-stack warehouse management application with both admin dashboard and cust
 - **Inventory Tracking**: Stock level monitoring and management
 - **RESTful API**: Endpoints for all operations
 - **Database Integration**: PostgreSQL with basic error handling
+- **JWT Authentication**: User registration and login system
 
 ### 🔨In Progress
-- **JWT Authentication**: User registration and login system
 - **Admin Dashboard**: React interface for warehouse management
 - **Customer Shop**: Frontend e-commerce interface for product browsing and purchasing
 
