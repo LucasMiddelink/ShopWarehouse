@@ -9,9 +9,9 @@ A full-stack warehouse management application with both admin dashboard and cust
 - **Inventory Tracking**: Stock level monitoring and management
 - **RESTful API**: Endpoints for all operations
 - **Database Integration**: PostgreSQL with basic error handling
+- **JWT Authentication**: User registration and login system
 
 ### 🔨In Progress
-- **JWT Authentication**: User registration and login system
 - **Admin Dashboard**: React interface for warehouse management
 - **Customer Shop**: Frontend e-commerce interface for product browsing and purchasing
 
@@ -60,6 +60,26 @@ A full-stack warehouse management application with both admin dashboard and cust
   "price": 9.99,
   "category": "Test",
   "stock_quantity": 13
+}
+```
+
+## Authentication
+
+| Method | Endpoint | Description | Auth Required | Body Required |
+|--------|----------|-------------|---------------|---------------|
+| `POST` | `/api/auth/register/customer` | Register new customer | None | ✅ Yes |
+| `POST` | `/api/auth/login` | Login (all roles) | None | ✅ Yes |
+| `POST` | `/api/auth/register/employee` | Create employee account | Employee/Admin | ✅ Yes |
+| `POST` | `/api/auth/register/admin` | Create admin account | Employee/Admin | ✅ Yes |
+| `GET` | `/api/auth/me` | Get current user info | Any user | No |
+| `POST` | `/api/auth/logout` | Logout user | Any user | No |
+
+### Request Body for Registration (any) & Login
+
+```json
+{
+ "email": "user@example.com",
+ "password": "password123"
 }
 ```
 
